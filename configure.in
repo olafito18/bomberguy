@@ -59,6 +59,7 @@ case "$target" in
         fi
         ;;
     *)
+        LIBS="$LIBS -lm"
         AC_PATH_X
         AC_PATH_XTRA
         if test x$have_x = xyes; then
