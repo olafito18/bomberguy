@@ -2606,8 +2606,8 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE=bomberclone
- VERSION=0.11.9
+ PACKAGE=bomberguy
+ VERSION=0.1
 
 
 cat >>confdefs.h <<_ACEOF

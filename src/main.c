@@ -30,7 +30,7 @@ main (int argc, char **argv)
 	int menuselect = 0;
 	_menu *menu;
 
-    printf ("Bomberclone version %s\n", VERSION);
+    printf ("bomberguy version %s\n", VERSION);
 	
 	players = malloc (sizeof (_player) * MAX_PLAYERS);
 	teams = malloc (sizeof (_team) * MAX_TEAMS);
@@ -49,7 +49,7 @@ main (int argc, char **argv)
 
 	while (menuselect != -1 && bman.state != GS_quit) {
 
-		menu = menu_new ("Bomberclone", 400, 250);
+		menu = menu_new ("bomberguy", 400, 250);
 		menu_create_label (menu, VERSION, 300, 240, 0, COLOR_yellow);
 		menu_create_button (menu, "Single Game", -1, 70, 200, 0); 
 		menu_create_button (menu, "Multiplayer Game", -1, 100, 200, 1); 

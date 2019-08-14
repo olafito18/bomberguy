@@ -5,7 +5,7 @@ dnl 	Please disable it in the Anjuta project configuration
 
 AC_INIT(configure.in)
 AC_CANONICAL_TARGET
-AM_INIT_AUTOMAKE(bomberclone, 0.11.9)
+AM_INIT_AUTOMAKE(bomberguy, 0.1)
 AM_CONFIG_HEADER(config.h)
 
 AC_EXEEXT
