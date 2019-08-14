@@ -15,7 +15,7 @@ Windows:
 	  
 	  The SDL.DLL file you will find under /usr/lib
 	  	  
-  2. Compile the Source of BomberClone
+  2. Compile the Source of bomberguy
   
 	  	  ./configure
 		  make
@@ -31,7 +31,7 @@ Windows:
 	  
 	  then run the game with 
 	  
-		  src/bomberclone.exe
+		  src/bomberguy.exe
   
 Linux:
   if everything goes right, you only need to run 
@@ -47,7 +47,7 @@ Linux:
 	   automake
 	   ./configure
 	   make
-	   src/bomberclone
+	   src/bomberguy
 
 
 Binary Versions
@@ -60,12 +60,12 @@ Linux:
 	  SDL-1.2.7, SDL_mixer and SDL_image (with PNG support)
 
   in the game dir just enter:
-	  ./bomberclone
+	  ./bomberguy
 
 Windows:
   The windows Binary Version will include eveything,
   the SDL Librarys and all other stuff needed by
-  BomberClone. The game will come with an Installer.
+  bomberguy. The game will come with an Installer.
   So you won't have to do anything.
 
 
@@ -99,7 +99,7 @@ Problems
 
 
 If you have other problems, or just want to say something about the game, you 
-just need to send me an email to : steffen@bomberclone.de
+just need to send me an email to : olaf@seldiame.net
 
 
 Network
@@ -139,19 +139,14 @@ Testers
 Contact
 =======
 
-Steffen Pohle           steffen@bomberclone.de
+Olaf H B (olaf@seldiame.net)
 
 Or on our Project Page 
-	http://sourceforge.net/projects/bomberclone
+	http://github/olafito18/bomberguy
 
 
 Thanks
 ======
-Thanks to TekkRat who mage all the diffrent players for us.
+Thanks to previous maintainers/authors.
 
 
-You can find us on : 
-  irc://irc.d-t-net.de #bomberclone
-
-
-http://www.bomberclone.de
