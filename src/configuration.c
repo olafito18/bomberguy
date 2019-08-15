@@ -138,7 +138,7 @@ config_init (int argc, char **argv)
     bman.start_range = START_RANGE;
     bman.bomb_tickingtime = BOMB_TIMEOUT;
     bman.dropitemsondeath = 0;
-    d_printf ("\n\n ***** Bomberclone Version %s \n\n", VERSION);
+    d_printf ("\n\n ***** bomberguy version %s \n\n", VERSION);
     config_read ();
 
     ReadPrgArgs (argc, argv);
@@ -153,7 +153,7 @@ config_init (int argc, char **argv)
 
     SDL_Flip (gfx.screen);
 
-    sprintf (text, "Bomberclone %s", VERSION);
+    sprintf (text, "bomberguy %s", VERSION);
     sprintf (icon, "%s/pixmaps/bomberclone.png", bman.datapath);
     SDL_WM_SetCaption (text, NULL);
     icon_img = IMG_Load (icon);
@@ -187,9 +187,9 @@ config_read ()
     char filename[512];
 
 #ifdef _WIN32
-    sprintf (filename, "%sbomberclone.cfg", s_gethomedir ());
+    sprintf (filename, "%sbomberguy.cfg", s_gethomedir ());
 #else
-    sprintf (filename, "%s.bomberclone.cfg", s_gethomedir ());
+    sprintf (filename, "%s.bomberguy.cfg", s_gethomedir ());
 #endif
 
     config = fopen (filename, "r");
@@ -485,9 +485,9 @@ config_write ()
     char filename[512];
 
 #ifdef _WIN32
-    sprintf (filename, "%sbomberclone.cfg", s_gethomedir ());
+    sprintf (filename, "%sbomberguy.cfg", s_gethomedir ());
 #else
-    sprintf (filename, "%s.bomberclone.cfg", s_gethomedir ());
+    sprintf (filename, "%s.bomberguy.cfg", s_gethomedir ());
 #endif
     if ((config = fopen (filename, "w")) == NULL)
         return -1;
@@ -729,16 +729,15 @@ ReadPrgArgs (int argc, char **argv)
 	char s;
     while (argv[++i] != NULL) {
         if (!strcmp (argv[i], "-h")||!strcmp (argv[i], "-help")||!strcmp (argv[i], "--help")) {
-            printf ("BomberClone Version " VERSION "\n");
-            printf (" WebPage       : http://www.bomberclone.de\n");
+            printf ("bomberguy version " VERSION "\n");
             printf (" Bug Report to :\n");
-            printf ("   http://sourceforge.net/tracker/?group_id=79449&atid=556629\n");
-            printf (" Other Comments: steffen@bomberclone.de\n");
+            printf ("   https://github.com/olafito18/bomberguy\n");
+            printf (" Other Comments: olaf@seldiame.net\n");
             printf ("\nProgramm options:\n");
             printf (" -name PLAYERNAME   - set the Playername\n");
             printf (" -name2 PLAYERNAME  - set the Playername for the second player\n");
             printf (" -gamename GAMENAME - set the name of the game\n");
-            printf (" -port PORT         - set the local BomberClone port\n");
+            printf (" -port PORT         - set the local bomberguy port\n");
             printf ("                      (Def.: 11000)\n");
             printf (" -ogcport PORT      - set the local OGC Port (Def.: 11100)\n");
             printf (" -ogc 0/1           - Enable/Disable OGC\n");

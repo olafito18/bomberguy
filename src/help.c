@@ -179,23 +179,19 @@ void help (int showpage) {
 			"ESC        - Exit Game\n");
 		}
 		else if (page == HP_credit0) {
-			sprintf (title, "About BomberClone (%d/%d)", page + 1, HP_max);
+			sprintf (title, "About bomberguy (%d/%d)", page + 1, HP_max);
 			menu = menu_new (title, 500, 400);
 			
 			menu_create_image (menu, "img", 15, 60, 0, gfx.players[4].menu_image, NULL);
 			menu_create_text (menu, "help", 75, 50, 45, 10, COLOR_brown,
 			"If you have any problems or questions with the game you can send your questions "
-			"to the mailinglist or directly to me. Bugfixes should be send to the SourceForge "
-			"Projects page about BomberClone.");
+			"to the mailinglist or directly to me. Bugfixes should be send to the bomberguy github project.");
 			
-			menu_create_label (menu, "WWW",-1, 140, 2, COLOR_yellow);
-			menu_create_text (menu, "help", -1, 165, 53, 10, COLOR_brown, "http://www.bomberclone.de");
-
-			menu_create_label (menu, "EMail",-1, 185, 2, COLOR_yellow);
-			menu_create_text (menu, "help", -1, 210, 53, 10, COLOR_brown, "steffen@bomberclone.de");
+			menu_create_label (menu, "email",-1, 185, 2, COLOR_yellow);
+			menu_create_text (menu, "help", -1, 210, 53, 10, COLOR_brown, "olaf@seldiame.net");
 
 			menu_create_label (menu, "Project Page",-1, 230, 2, COLOR_yellow);
-			menu_create_text (menu, "help", -1, 255, 53, 10, COLOR_brown, "http://sourceforge.net/projects/bomberclone");
+			menu_create_text (menu, "help", -1, 255, 53, 10, COLOR_brown, "https://github.com/olafito18/bomberguy");
 		}			
 		else if (page == HP_credit1) {
 			sprintf (title, "People (%d/%d)", page + 1, HP_max);
@@ -207,7 +203,7 @@ void help (int showpage) {
 			menu_create_label (menu, "Coding:", 5, y, 2, COLOR_yellow);
 			y += font[2].size.y;
 			menu_create_text (menu, "help", 50, y, 53, 10, COLOR_brown,
-			"  Steffen Pohle\n"
+			"  Olaf H B\nSteffen Pohle\n"
 			"Patrick Wilczek\n");
 
 			y = 100;

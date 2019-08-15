@@ -1990,7 +1990,7 @@ do_pkg (struct pkg *packet, _net_addr * addr, int len)
         do_teamdata ((struct pkg_teamdata *) packet, addr);
         break;
     default:
-        send_error (addr, "BomberClone: unknown data packet");
+        send_error (addr, "bomberguy: unknown data packet");
         break;
     }
 };

@@ -128,7 +128,7 @@ network_init ()
 
     if (bman.notifygamemaster) {
         network_server_port (bman.ogcserver, host, LEN_SERVERNAME, port, LEN_PORT);
-        if (ogc_init (bman.ogc_port, host, port, "BomberClone", bman.net_ai_family) == 0)
+        if (ogc_init (bman.ogc_port, host, port, "bomberguy", bman.net_ai_family) == 0)
             bman.notifygamemaster = 0;
     }
 
@@ -978,7 +978,7 @@ send_ogc_update ()
         sprintf (status, "error");
         break;
     }
-    ogc_sendgamestatus (bman.sock, "BomberClone", VERSION, bman.gamename, j, bman.maxplayer,
+    ogc_sendgamestatus (bman.sock, "bomberguy", VERSION, bman.gamename, j, bman.maxplayer,
                         status);
 };
 
