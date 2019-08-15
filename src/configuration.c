@@ -591,13 +591,13 @@ config_video ()
         {"640x480", NULL},
         {"800x600", NULL},
         {"1024x768", NULL},
+	{"1280x720", NULL},
         {"1280x800", NULL},
         {"1280x1024", NULL},
-	{"1600x1200", NULL},
 	{"1366x768",NULL},
+	{"1600x1200", NULL},
         {"1920x1080", NULL},
-        {"1920x1200", NULL},        
-	{"1280x800", NULL}
+        {"1920x1200", NULL}
     };
     _charlist screenbpp[] = {
         {"16", NULL},
