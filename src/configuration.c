@@ -722,7 +722,7 @@ config_menu ()
 };
 
 
-/* Read Programm parameter */
+/* Read Program parameter */
 void
 ReadPrgArgs (int argc, char **argv)
 {
@@ -730,11 +730,10 @@ ReadPrgArgs (int argc, char **argv)
 	char s;
     while (argv[++i] != NULL) {
         if (!strcmp (argv[i], "-h")||!strcmp (argv[i], "-help")||!strcmp (argv[i], "--help")) {
-            printf ("bomberguy version " VERSION "\n");
             printf (" Bug Report to :\n");
             printf ("   https://github.com/olafito18/bomberguy\n");
             printf (" Other Comments: olaf@seldiame.net\n");
-            printf ("\nProgramm options:\n");
+            printf ("\nProgram options:\n");
             printf (" -name PLAYERNAME   - set the Playername\n");
             printf (" -name2 PLAYERNAME  - set the Playername for the second player\n");
             printf (" -gamename GAMENAME - set the name of the game\n");
