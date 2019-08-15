@@ -1,4 +1,3 @@
-/* $Id: basic.h,v 1.39 2010-12-11 20:55:37 steffen Exp $ */
 /* basic types which we need everywhere */
 
 #ifndef _BC_BASIC_H_

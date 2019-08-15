@@ -1,5 +1,4 @@
-/* $Id: udp.h,v 1.4 2009-12-18 11:05:37 stpohle Exp $
- * UDP Network */
+/* UDP Network */
 
 #ifndef _UDP_H
 #define _UDP_H

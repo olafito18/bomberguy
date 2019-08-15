@@ -1,5 +1,4 @@
-/* $Id: network.h,v 1.24 2006-08-13 21:26:50 stpohle Exp $
- * network.h file... for everything what have to do with the network stuff 
+/* network.h file... for everything what have to do with the network stuff 
  */
 
 #include <SDL.h>

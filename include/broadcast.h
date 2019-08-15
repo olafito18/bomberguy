@@ -1,5 +1,3 @@
-/* $Id: broadcast.h,v 1.2 2005-03-28 16:38:29 stpohle Exp $ */
-
 #define BC_MAXENTRYS 64
 #define BC_REQUESTTIME 2500
 #define BC_REQUESTTIMEOUT 7500

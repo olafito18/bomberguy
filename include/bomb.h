@@ -1,5 +1,4 @@
-/* $Id: bomb.h,v 1.8 2009-05-11 20:51:25 stpohle Exp $
- * bomb include file
+/* bomb include file
  */
 
 #ifndef _BOMB_H_

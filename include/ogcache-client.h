@@ -1,5 +1,4 @@
-/* $Id: ogcache-client.h,v 1.2 2005-03-27 01:31:50 stpohle Exp $
- * include file for the opengamesrv.c file
+/* include file for the opengamesrv.c file
  */
 
 #ifndef _OGCACHE_CLIENT_H

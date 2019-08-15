@@ -1,5 +1,4 @@
-/* $Id: player.h,v 1.12 2009-05-11 20:51:25 stpohle Exp $
- * playerinclude file
+/* playerinclude file
  */
 
 #ifndef _PLAYER_H_

@@ -1,5 +1,4 @@
-/* $Id: packets.h,v 1.39 2009-05-11 20:51:25 stpohle Exp $
- * network packets.. */
+/* network packets.. */
 
 #ifndef _PACKETS_H_
 #define _PACKETS_H_

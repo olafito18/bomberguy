@@ -1,5 +1,3 @@
-/* $Id: keybinput.h,v 1.6 2004-05-25 22:22:27 stpohle Exp $ */
-
 #ifndef _KEYBINPUT_H_
 #define _KEYBINPUT_H_
 

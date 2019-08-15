@@ -1,4 +1,3 @@
-/* $Id: map.h,v 1.16 2006-07-30 11:44:57 stpohle Exp $ */
 /* map.h */
 
 #ifndef _MAP_H_
