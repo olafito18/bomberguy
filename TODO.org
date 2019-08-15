@@ -7,6 +7,7 @@
 ** TODO update visual style
 ** TODO make smart map generation (avoid weird background/tiles colors)
 * TODO bugs [0%]
+** TODO fix segmentation fault when selecting fullscreen with certain resolutions
 ** TODO explosions
    sometimes bombs can explode more times, slow networks (very slow)
 ** TODO make ai player not rotate like crazy
