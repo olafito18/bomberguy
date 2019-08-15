@@ -594,6 +594,7 @@ config_video ()
         {"1280x800", NULL},
         {"1280x1024", NULL},
 	{"1600x1200", NULL},
+	{"1366x768",NULL},
         {"1920x1080", NULL},
         {"1920x1200", NULL},        
 	{"1280x800", NULL}
@@ -610,7 +611,7 @@ config_video ()
     _menu *menu;
 
     /* set all pointers in this array */
-    charlist_fillarraypointer (screenres, 9);
+    charlist_fillarraypointer (screenres, 10);
     charlist_fillarraypointer (screenbpp, 3);
 
     /* select the current settings */
