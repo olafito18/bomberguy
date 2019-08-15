@@ -1,12 +1,7 @@
-dnl Process this file with autoconf to produce a configure script.
-dnl Created by Anjuta - will be overwritten
-dnl If you don't want it to overwrite it,
-dnl 	Please disable it in the Anjuta project configuration
-
-AC_INIT(configure.in)
+AC_INIT([bomberguy], [0.1], [olaf@seldiame.net])
 AC_CANONICAL_TARGET
-AM_INIT_AUTOMAKE(bomberguy, 0.1)
-AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE([-Wall])
+
 
 AC_EXEEXT
 AC_OBJEXT
@@ -278,36 +273,16 @@ AC_SUBST(PACKAGE_MENU_DIR)
 
 AM_CONDITIONAL(MINGW32, test x$MINGW32 = xyes)
 
-AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/${packagedatadir}")
-AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/${packagedocdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/${packagepixmapsdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_HELP_DIR, "${packageprefix}/${packagehelpdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_MENU_DIR, "${packageprefix}/${packagemenudir}")
-AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
+AC_DEFINE_UNQUOTED([PACKAGE_DATA_DIR], ["${packageprefix}/${packagedatadir}"])
+AC_DEFINE_UNQUOTED([PACKAGE_DOC_DIR], ["${packageprefix}/${packagedocdir}"])
+AC_DEFINE_UNQUOTED([PACKAGE_PIXMAPS_DIR], ["${packageprefix}/${packagepixmapsdir}"])
+AC_DEFINE_UNQUOTED([PACKAGE_HELP_DIR], ["${packageprefix}/${packagehelpdir}"])
+AC_DEFINE_UNQUOTED([PACKAGE_MENU_DIR], ["${packageprefix}/${packagemenudir}"])
+AC_DEFINE_UNQUOTED([PACKAGE_SOURCE_DIR], ["${packagesrcdir}"])
 
-AC_OUTPUT([
-Makefile
-src/Makefile
-include/Makefile
-data/Makefile
-data/pixmaps/Makefile
-data/player/Makefile
-data/gfx/Makefile
-data/maps/Makefile
-data/music/Makefile
-data/tileset/Makefile
-data/tileset/cemetery/Makefile
-data/tileset/cucumber/Makefile
-data/tileset/default/Makefile
-data/tileset/hell/Makefile
-data/tileset/radioactive/Makefile
-data/tileset/supermario/Makefile
-data/tileset/uccia_garbage/Makefile
-data/tileset/classic/Makefile
-data/tileset/farm/Makefile
-data/tileset/jungle/Makefile
-data/tileset/modern/Makefile
-data/tileset/sheep/Makefile
-data/tileset/tricked/Makefile
-data/tileset/zbb_frog/Makefile
+AC_CONFIG_FILES([
+ Makefile
+ src/Makefile
 ])
+
+AC_OUTPUT

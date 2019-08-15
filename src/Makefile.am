@@ -1,9 +1,8 @@
-
 INCLUDES = -I../include
 
-bin_PROGRAMS = bomberclone
+bin_PROGRAMS = bomberguy
 
-bomberclone_SOURCES = \
+bomberguy_SOURCES = \
 	main.c\
 	bomb.c\
 	debug.c\
@@ -47,7 +46,7 @@ bomberclone_SOURCES = \
 	broadcast.c
 
 if MINGW32
-bomberclone_LDADD = bc-res.o
+bomberguy_LDADD = bc-res.o
 
 
 bc-res.o: bc-res.rc
