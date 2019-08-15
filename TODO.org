@@ -1,0 +1,20 @@
+* TODO enhancements [0%]
+** TODO add new video resolutions
+** TODO i18n
+*** TODO spanish
+** TODO increase text and menus size when high resoltion is active
+** TODO force stop or move away from portals when using one to avoid travel loops
+** TODO update visual style
+** TODO make smart map generation (avoid weird background/tiles colors)
+* TODO bugs [0%]
+** TODO explosions
+   sometimes bombs can explode more times, slow networks (very slow)
+** TODO make ai player not rotate like crazy
+** TODO make escape key works always
+* TODO rebranding [0%]
+** TODO create/update new art for bomberguy
+** TODO replace bomberclone strings
+* TODO other [0%]
+** TODO New Cross Compiling Toolchain is needed
+   rm cross-config.cache; LIBS="-static -ltiff -ljpeg -lpng12 -lz -lsmpeg -lSDL -logg -lpthread -lstdc++ -lwinmm" cross-configure.sh
+
