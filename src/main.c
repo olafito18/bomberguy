@@ -1,5 +1,3 @@
-/* $Id: main.c,v 1.37 2008-07-27 11:24:37 stpohle Exp $ */
-
 #include "basic.h"
 #include "bomberclone.h"
 #include "network.h"

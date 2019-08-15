@@ -1,5 +1,4 @@
-/* $Id: game.c,v 1.120 2009-05-11 20:51:25 stpohle Exp $ 
-  game.c - procedures for the game. */
+/*  game.c - procedures for the game. */
 
 #include <string.h>
 #include <SDL.h>

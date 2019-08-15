@@ -1,5 +1,4 @@
-/* $Id: netsrvlist.c,v 1.17 2005-08-07 17:46:21 stpohle Exp $
- * netsrvlist.c - shows a list of possible servers.*/
+/* netsrvlist.c - shows a list of possible servers.*/
  
 #include "basic.h"
 #include "bomberclone.h"

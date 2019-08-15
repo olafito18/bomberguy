@@ -1,4 +1,3 @@
-/* $Id: gfxpixelimage.c,v 1.13 2005-04-09 18:22:41 stpohle Exp $ */
 /* gfx pixel manipulation and image manipulation */
 
 #include "bomberclone.h"

@@ -1,5 +1,4 @@
-/* $Id: keyb.c,v 1.7 2008-07-27 11:24:37 stpohle Exp $
- * keyb.c
+/* keyb.c
  */
 
 #include "bomberclone.h"

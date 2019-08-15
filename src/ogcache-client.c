@@ -1,5 +1,4 @@
-/* $Id: ogcache-client.c,v 1.7 2005-03-28 16:26:40 stpohle Exp $
- * OpenGameCache-Client: this file will hold the protocol for the gameserver communication
+/* OpenGameCache-Client: this file will hold the protocol for the gameserver communication
  */
 
 #include "basic.h"

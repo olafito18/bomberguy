@@ -1,5 +1,4 @@
-/* $Id: configuration.c,v 1.85 2009-11-28 13:11:51 stpohle Exp $
- * configuration */
+/* configuration */
 
 #include <SDL.h>
 

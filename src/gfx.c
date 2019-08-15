@@ -1,4 +1,3 @@
-/* $Id: gfx.c,v 1.42 2009-10-10 09:43:55 stpohle Exp $ */
 /* gfx.c */
 
 #include "bomberclone.h"

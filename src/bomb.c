@@ -1,4 +1,3 @@
-/* $Id: bomb.c,v 1.71 2009-05-11 20:51:25 stpohle Exp $ */
 /* everything what have to do with the bombs */
 
 #include "bomberclone.h"

@@ -1,4 +1,3 @@
-/* $Id: sound.c,v 1.8 2005-07-06 13:11:56 stpohle Exp $ */
 /* sound */
 
 #include "sound.h"

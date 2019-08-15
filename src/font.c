@@ -1,4 +1,3 @@
-/* $Id: font.c,v 1.16 2005-07-06 13:11:55 stpohle Exp $ */
 // Using Fonts in SDL
 
 #include <string.h>

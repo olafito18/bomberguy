@@ -1,5 +1,4 @@
-/* $Id: player.c,v 1.108 2009-10-11 17:14:47 stpohle Exp $
- * player.c - everything what have to do with the player */
+/* player.c - everything what have to do with the player */
 
 #include <SDL.h>
 #include "bomberclone.h"

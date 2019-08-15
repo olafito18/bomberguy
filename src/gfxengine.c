@@ -1,4 +1,3 @@
-/* $Id: gfxengine.c,v 1.7 2005-07-06 13:11:55 stpohle Exp $ */
 /* GFX Game Engine */
 
 #include "bomberclone.h"

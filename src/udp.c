@@ -1,4 +1,3 @@
-/* $Id: udp.c,v 1.18 2009-12-18 11:05:37 stpohle Exp $ */
 /* udp.c code for the network
 	File Version 0.2
 */
