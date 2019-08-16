@@ -5802,6 +5802,7 @@ done
 
 
 
+
 if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
 	if test -n "$ac_tool_prefix"; then
   # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
@@ -6293,22 +6294,22 @@ rm -f core conftest.err conftest.$ac_objext \
   rm -f conf.sdltest
 
 
-    CFLAGS="$SDL_CFLAGS $CFLAGS"
-	SDL_LIBS="$SDL_LIBS -lpng -ljpeg"
-    LIBS="$SDL_LIBS $LIBS"
+CFLAGS="$SDL_CFLAGS $CFLAGS"
+SDL_LIBS="$SDL_LIBS -lpng -ljpeg"
+LIBS="$SDL_LIBS $LIBS"
 
 
 
 case "$target" in
-    *cygwin* | *mingw32* | *mingw32msvc* )
-        CFLAGS="$CFLAGS"
-        LIBS="$LIBS -liberty -lwsock32 -lm"
-	MINGW32=yes
-        ;;
-    *solaris* )
-	CFLAGS="$CFLAGS"
-	LIBS="$LIBS -lsocket -lnsl -lm"
-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for X" >&5
+*cygwin* | *mingw32* | *mingw32msvc* )
+CFLAGS="$CFLAGS"
+LIBS="$LIBS -liberty -lwsock32 -lm"
+MINGW32=yes
+;;
+*solaris* )
+CFLAGS="$CFLAGS"
+LIBS="$LIBS -lsocket -lnsl -lm"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for X" >&5
 $as_echo_n "checking for X... " >&6; }
 
 
@@ -6501,7 +6502,7 @@ else
 $as_echo "libraries $x_libraries, headers $x_includes" >&6; }
 fi
 
-        if test "$no_x" = yes; then
+if test "$no_x" = yes; then
   # Not all programs may use this symbol, but it does not hurt to define it.
 
 $as_echo "#define X_DISPLAY_MISSING 1" >>confdefs.h
@@ -6991,16 +6992,16 @@ fi
 
 fi
 
-        if test x$have_x = xyes; then
-            CFLAGS="$CFLAGS $X_CFLAGS"
-            SYS_GL_LIBS="$X_LIBS -lGL -lGLU"
-        else
-            SYS_GL_LIBS="-lGL -lGLU"
-        fi
-        ;;
-    *)
-        LIBS="$LIBS -lm"
-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for X" >&5
+if test x$have_x = xyes; then
+CFLAGS="$CFLAGS $X_CFLAGS"
+SYS_GL_LIBS="$X_LIBS -lGL -lGLU"
+else
+SYS_GL_LIBS="-lGL -lGLU"
+fi
+;;
+*)
+LIBS="$LIBS -lm"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for X" >&5
 $as_echo_n "checking for X... " >&6; }
 
 
@@ -7193,7 +7194,7 @@ else
 $as_echo "libraries $x_libraries, headers $x_includes" >&6; }
 fi
 
-        if test "$no_x" = yes; then
+if test "$no_x" = yes; then
   # Not all programs may use this symbol, but it does not hurt to define it.
 
 $as_echo "#define X_DISPLAY_MISSING 1" >>confdefs.h
@@ -7683,10 +7684,10 @@ fi
 
 fi
 
-        if test x$have_x = xyes; then
-            CFLAGS="$CFLAGS $X_CFLAGS"
-        fi
-        ;;
+if test x$have_x = xyes; then
+CFLAGS="$CFLAGS $X_CFLAGS"
+fi
+;;
 esac
 
 
@@ -7696,11 +7697,11 @@ if test "${enable_debug+set}" = set; then :
 fi
 
 if test x$enable_debug = xno ; then
-	CFLAGS="$CFLAGS"
+CFLAGS="$CFLAGS"
 else
-	CFLAGS="$CFLAGS -ggdb -O0"
-	LDFLAGS="$LDFLAGS -ggdb"
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Enable Debuging" >&5
+CFLAGS="$CFLAGS -ggdb -O0"
+LDFLAGS="$LDFLAGS -ggdb"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Enable Debuging" >&5
 $as_echo "$as_me: WARNING: Enable Debuging" >&2;}
 fi
 
@@ -7710,11 +7711,11 @@ if test "${enable_werror+set}" = set; then :
 fi
 
 if test x$enable_werror = xno ; then
-	CFLAGS="$CFLAGS -Wall"
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Disable Warning as Error Treatment" >&5
+CFLAGS="$CFLAGS -Wall"
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Disable Warning as Error Treatment" >&5
 $as_echo "$as_me: WARNING: Disable Warning as Error Treatment" >&2;}
 else
-	CFLAGS="$CFLAGS -Wall -Werror"
+CFLAGS="$CFLAGS -Wall -Werror"
 fi
 
 
@@ -7832,18 +7833,18 @@ else
 fi
 
 if test x$enable_sdlmixer = xno ; then
-     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Disable SDLMixer support" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Disable SDLMixer support" >&5
 $as_echo "$as_me: WARNING: Disable SDLMixer support" >&2;}
-	 have_sdl_mixer=no
+have_sdl_mixer=no
 else
-	if test x"$sdlmixer_prefix" != "x"; then
-  		SDLMIXER_LIB="-L$sdlmixer_prefix/lib"
-  		SDLMIXER_CFLAGS="-I$sdlmixer_prefix/include"
-  		LDFLAGS="$SDLMIXER_LIB $LDFLAGS"
-  		CFLAGS="$CFLAGS $SDLMIXER_CFLAGS"
-	fi
+if test x"$sdlmixer_prefix" != "x"; then
+SDLMIXER_LIB="-L$sdlmixer_prefix/lib"
+SDLMIXER_CFLAGS="-I$sdlmixer_prefix/include"
+LDFLAGS="$SDLMIXER_LIB $LDFLAGS"
+CFLAGS="$CFLAGS $SDLMIXER_CFLAGS"
+fi
 
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Mix_OpenAudio in -lSDL2_mixer" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Mix_OpenAudio in -lSDL2_mixer" >&5
 $as_echo_n "checking for Mix_OpenAudio in -lSDL2_mixer... " >&6; }
 if ${ac_cv_lib_SDL2_mixer_Mix_OpenAudio+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -7886,15 +7887,15 @@ else
 fi
 
 
-	if test "x$have_sdl_mixer" = "xyes"; then
+if test "x$have_sdl_mixer" = "xyes"; then
 
 $as_echo "#define HAVE_SDL_MIXER 1" >>confdefs.h
 
- 		LIBS="$LIBS -lSDL_mixer"
-	else
- 		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: *** libSDL_mixer not found. Make sure you have the development package of SDL_mixer installed - (www.libsdl.org) - or try to use --with-sdlmixer-prefix option" >&5
+LIBS="$LIBS -lSDL_mixer"
+else
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: *** libSDL_mixer not found. Make sure you have the development package of SDL_mixer installed - (www.libsdl.org) - or try to use --with-sdlmixer-prefix option" >&5
 $as_echo "$as_me: WARNING: *** libSDL_mixer not found. Make sure you have the development package of SDL_mixer installed - (www.libsdl.org) - or try to use --with-sdlmixer-prefix option" >&2;}
-	fi
+fi
 fi
 
 
@@ -7926,7 +7927,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_rintf" >&5
 $as_echo "$have_rintf" >&6; }
 if test x$have_rintf = xno; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for rintf in -lm" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for rintf in -lm" >&5
 $as_echo_n "checking for rintf in -lm... " >&6; }
 if ${ac_cv_lib_m_rintf+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8004,7 +8005,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_rint" >&5
 $as_echo "$have_rint" >&6; }
 if test x$have_rint = xno; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for rint in -lm" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for rint in -lm" >&5
 $as_echo_n "checking for rint in -lm... " >&6; }
 if ${ac_cv_lib_m_rint+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8083,7 +8084,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_powf" >&5
 $as_echo "$have_powf" >&6; }
 if test x$have_powf = xno; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for powf in -lm" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for powf in -lm" >&5
 $as_echo_n "checking for powf in -lm... " >&6; }
 if ${ac_cv_lib_m_powf+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8160,7 +8161,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_sqrtf" >&5
 $as_echo "$have_sqrtf" >&6; }
 if test x$have_sqrtf = xno; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for sqrtf in -lm" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for sqrtf in -lm" >&5
 $as_echo_n "checking for sqrtf in -lm... " >&6; }
 if ${ac_cv_lib_m_sqrtf+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8238,7 +8239,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_floorf" >&5
 $as_echo "$have_floorf" >&6; }
 if test x$have_floorf = xno; then
-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for floorf in -lm" >&5
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for floorf in -lm" >&5
 $as_echo_n "checking for floorf in -lm... " >&6; }
 if ${ac_cv_lib_m_floorf+:} false; then :
   $as_echo_n "(cached) " >&6
@@ -8294,9 +8295,9 @@ fi
 packagesrcdir=`cd $srcdir && pwd`
 
 if test "x${prefix}" = "xNONE"; then
-  packageprefix=${ac_default_prefix}
+packageprefix=${ac_default_prefix}
 else
-  packageprefix=${prefix}
+packageprefix=${prefix}
 fi
 
 packagedatadir=share/games/${PACKAGE}

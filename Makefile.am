@@ -1,6 +1,6 @@
 SUBDIRS = data include src
 
-bomberguy_docdir = ${prefix}/share/doc/bomberclone
+bomberguy_docdir = ${prefix}/share/doc/bomberguy
 bomberguy_doc_DATA = \
 	README\
 	COPYING\
