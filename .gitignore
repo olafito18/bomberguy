@@ -6,4 +6,5 @@ config.log
 config.status
 src/bomberguy
 autom4te.cache/
+config.h
 
