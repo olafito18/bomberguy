@@ -89,6 +89,7 @@
 #define UINT16_HALF 32767
 
 #include <SDL.h>
+#include "SDL_ttf.h"
 
 enum _backgound {               // to load some diffrent logos.. 
         BG_start = 0,

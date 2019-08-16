@@ -40,7 +40,7 @@ main (int argc, char **argv)
     }
 
     SDL_InitSubSystem ( SDL_INIT_JOYSTICK );
-	SDL_EnableUNICODE(1);
+
 	
 	config_init (argc, argv);
 	keyb_init ();

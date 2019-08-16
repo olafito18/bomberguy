@@ -79,8 +79,8 @@ void font_load () {
 			exit (1);
 		}
 		
-		SDL_SetColorKey (tmp , SDL_SRCCOLORKEY, SDL_MapRGB (tmp->format, 255, 255, 255));
-		raw = SDL_DisplayFormat (tmp);
+		SDL_SetColorKey (tmp , SDL_TRUE, SDL_MapRGB (tmp->format, 255, 255, 255));
+		raw = SDL_ConvertSurfaceFormat(tmp, SDL_GetWindowPixelFormat(gfx.window), 0);
 		
 		for (c = 0; c < COLOR_max; c++) {
 			switch (c) {
@@ -126,8 +126,8 @@ void font_load () {
 					break;
 			}
 			
-			font[i].image[c] = SDL_DisplayFormat (tmp);
-			SDL_SetColorKey (font[i].image[c] , SDL_SRCCOLORKEY, SDL_MapRGB (font[i].image[c]->format, 0,0,0));
+			font[i].image[c] = SDL_ConvertSurfaceFormat(tmp, SDL_GetWindowPixelFormat(gfx.window), 0);
+			SDL_SetColorKey (font[i].image[c] , SDL_TRUE, SDL_MapRGB (font[i].image[c]->format, 0,0,0));
 			SDL_FillRect (font[i].image[c], NULL, SDL_MapRGB (font[i].image[c]->format, r,g,b));
 			SDL_BlitSurface (raw, NULL, font[i].image[c], NULL);
 		}

@@ -298,7 +298,7 @@ mapinfo ()
        font_draw (1 + x, 1 + y, text, 0); */
     y = y + 2 + font[0].size.y;
 
-    SDL_Flip (gfx.screen);
+    SDL_RenderPresent(gfx.renderer);
     keybinput_new (&ki, KEYBI_text, 10);
 
     while (!done && bman.state == GS_wait) {

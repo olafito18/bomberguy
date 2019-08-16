@@ -123,8 +123,8 @@ tileset_load (char *tilesetname, int dx, int dy)
         scale_image (tmpimage, (tmpimage->w / GFX_IMGSIZE) * gfx.block.x,
                      gfx.fire.frames * gfx.block.y);
     getRGBpixel (tmpimage1, 0, 0, &r, &g, &b);
-    SDL_SetColorKey (tmpimage1, SDL_SRCCOLORKEY, SDL_MapRGB (tmpimage1->format, r, g, b));
-    gfx.fire.image = SDL_DisplayFormat (tmpimage1);
+    SDL_SetColorKey (tmpimage1, SDL_TRUE, SDL_MapRGB (tmpimage1->format, r, g, b));
+    gfx.fire.image = SDL_ConvertSurfaceFormat(tmpimage1, SDL_GetWindowPixelFormat(gfx.window), 0);
     SDL_FreeSurface (tmpimage);
     SDL_FreeSurface (tmpimage1);
 
@@ -145,8 +145,8 @@ tileset_load (char *tilesetname, int dx, int dy)
         scale_image (tmpimage, (tmpimage->w / GFX_IMGSIZE) * gfx.block.x,
                      gfx.bomb.frames * gfx.block.y);
     getRGBpixel (tmpimage1, 0, 0, &r, &g, &b);
-    SDL_SetColorKey (tmpimage1, SDL_SRCCOLORKEY, SDL_MapRGB (tmpimage1->format, r, g, b));
-    gfx.bomb.image = SDL_DisplayFormat (tmpimage1);
+    SDL_SetColorKey (tmpimage1, SDL_TRUE, SDL_MapRGB (tmpimage1->format, r, g, b));
+    gfx.bomb.image = SDL_ConvertSurfaceFormat(tmpimage1, SDL_GetWindowPixelFormat(gfx.window), 0);
     SDL_FreeSurface (tmpimage);
     SDL_FreeSurface (tmpimage1);
 
@@ -179,8 +179,8 @@ tileset_load (char *tilesetname, int dx, int dy)
         tmpimage1 =
             scale_image (tmpimage, (tmpimage->w / GFX_IMGSIZE) * gfx.block.x,
                          gfx.powerup[i].frames * gfx.block.y);
-        SDL_SetColorKey (tmpimage1, SDL_SRCCOLORKEY, SDL_MapRGB (tmpimage1->format, 255, 0, 255));
-        gfx.powerup[i].image = SDL_DisplayFormat (tmpimage1);
+        SDL_SetColorKey (tmpimage1, SDL_TRUE, SDL_MapRGB (tmpimage1->format, 255, 0, 255));
+        gfx.powerup[i].image = SDL_ConvertSurfaceFormat(tmpimage1, SDL_GetWindowPixelFormat(gfx.window), 0);
         SDL_FreeSurface (tmpimage);
         SDL_FreeSurface (tmpimage1);
     }
@@ -217,8 +217,8 @@ tileset_load (char *tilesetname, int dx, int dy)
                 r = g = b = 255;
             else
                 getRGBpixel (tmpimage1, 0, 0, &r, &g, &b);
-            SDL_SetColorKey (tmpimage1, SDL_SRCCOLORKEY, SDL_MapRGB (tmpimage1->format, r, g, b));
-            gfx.field[i].image = SDL_DisplayFormat (tmpimage1);
+            SDL_SetColorKey (tmpimage1, SDL_TRUE, SDL_MapRGB (tmpimage1->format, r, g, b));
+            gfx.field[i].image = SDL_ConvertSurfaceFormat(tmpimage1, SDL_GetWindowPixelFormat(gfx.window), 0);
             SDL_FreeSurface (tmpimage1);
             SDL_FreeSurface (tmpimage);
         }

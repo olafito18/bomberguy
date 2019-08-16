@@ -25,45 +25,45 @@ int keybinput_loop (_keybinput *ki, SDL_Event *event) {
 
 	ki->changed = 0;
 	
-	if (event->type == SDL_KEYDOWN && keybinput_oldkey != event->key.keysym.sym) {
-		key = keybinput_oldkey = event->key.keysym.sym;
-		keyu = event->key.keysym.unicode;
+	/* if (event->type == SDL_KEYDOWN && keybinput_oldkey != event->key.keysym.sym) { */
+	/* 	key = keybinput_oldkey = event->key.keysym.sym; */
+	/* 	keyu = event->key.keysym.unicode; */
 	
-		if (key == 8) { // BACKSPACE
-			if (ki->curpos > 0) {
-				ki->curpos--;
-				ki->text[ki->curpos] = 0;
-				ki->changed = 1;
-			}
-		}
-		else if (ki->type == KEYBI_text && ((keyu >= 32 && keyu <= 126) || (keyu >= 128 && keyu <= 255))) {
-			/* text keys will be read */
-			if (ki->curpos < ki->maxlen) {
-				ki->text[ki->curpos++] = event->key.keysym.unicode;
-				ki->text[ki->curpos] = 0;
-				ki->changed = 1;
-			}
-		}
-		else if (ki->type == KEYBI_int && (keyu == '-' || (keyu >= '0' && keyu <= '9'))) {
-			/* only integers will be read */
-			if (ki->curpos < 255) {
-				ki->text[ki->curpos] = event->key.keysym.unicode;
-				if (atoi(ki->text) <= ki->maxlen)
-					ki->curpos++;
-				ki->text[ki->curpos] = 0;
-				ki->changed = 1;
-			}
-		}
-		else if (ki->type == KEYBI_float && (keyu == '-' || keyu == '.' || (keyu >= '0' && keyu <= '9'))) {
-			/* only floats will be read */
-			if (ki->curpos < 255) {
-				ki->text[ki->curpos++] = event->key.keysym.unicode;
-				ki->text[ki->curpos] = 0;
-				ki->changed = 1;
-			}
-		}
-		ki->len = strlen (ki->text);
-	}
+	/* 	if (key == 8) { // BACKSPACE */
+	/* 		if (ki->curpos > 0) { */
+	/* 			ki->curpos--; */
+	/* 			ki->text[ki->curpos] = 0; */
+	/* 			ki->changed = 1; */
+	/* 		} */
+	/* 	} */
+	/* 	else if (ki->type == KEYBI_text && ((keyu >= 32 && keyu <= 126) || (keyu >= 128 && keyu <= 255))) { */
+	/* 		/\* text keys will be read *\/ */
+	/* 		if (ki->curpos < ki->maxlen) { */
+	/* 			ki->text[ki->curpos++] = event->key.keysym.unicode; */
+	/* 			ki->text[ki->curpos] = 0; */
+	/* 			ki->changed = 1; */
+	/* 		} */
+	/* 	} */
+	/* 	else if (ki->type == KEYBI_int && (keyu == '-' || (keyu >= '0' && keyu <= '9'))) { */
+	/* 		/\* only integers will be read *\/ */
+	/* 		if (ki->curpos < 255) { */
+	/* 			ki->text[ki->curpos] = event->key.keysym.unicode; */
+	/* 			if (atoi(ki->text) <= ki->maxlen) */
+	/* 				ki->curpos++; */
+	/* 			ki->text[ki->curpos] = 0; */
+	/* 			ki->changed = 1; */
+	/* 		} */
+	/* 	} */
+	/* 	else if (ki->type == KEYBI_float && (keyu == '-' || keyu == '.' || (keyu >= '0' && keyu <= '9'))) { */
+	/* 		/\* only floats will be read *\/ */
+	/* 		if (ki->curpos < 255) { */
+	/* 			ki->text[ki->curpos++] = event->key.keysym.unicode; */
+	/* 			ki->text[ki->curpos] = 0; */
+	/* 			ki->changed = 1; */
+	/* 		} */
+	/* 	} */
+	/* 	ki->len = strlen (ki->text); */
+	/* } */
 	
 	if (keybinput_oldkey == SDLK_RETURN && event->type == SDL_KEYUP)
 		keyu = 1;

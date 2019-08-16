@@ -453,8 +453,8 @@ menu_event_loop (_menu * menu, SDL_Event * event, int eventstate)
             break;
         case (SDL_KEYDOWN):    /* focus next element */
             if (menu->oldkey == 0 && event->key.keysym.sym == SDLK_TAB) {
-                keys = SDL_GetKeyState (NULL);
-                if (keys[SDLK_LSHIFT] || keys[SDLK_RSHIFT])
+                keys = SDL_GetKeyboardState (NULL);
+                if (keys[SDL_SCANCODE_LSHIFT] || keys[SDL_SCANCODE_RSHIFT])
                     menu_focus_prev (menu);
                 else
                     menu_focus_next (menu);

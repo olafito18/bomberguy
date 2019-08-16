@@ -496,7 +496,7 @@ net_transmit_gamedata ()
         net_istep = 3;
 
     draw_netupdatestate (1);
-    SDL_Flip (gfx.screen);
+    SDL_RenderPresent(gfx.renderer);
 
     downtimestamp = timestamp;
     while (!done && (bman.state == GS_update || (GT_MP_PTPS && net_istep != 0))) {
@@ -615,9 +615,9 @@ net_transmit_gamedata ()
                 done = 1;
             }
 
-        keys = SDL_GetKeyState (NULL);
+        keys = SDL_GetKeyboardState(NULL);
 
-        if (keys[SDLK_ESCAPE] && event.type == SDL_KEYDOWN) {
+        if (keys[SDL_SCANCODE_ESCAPE] && event.type == SDL_KEYDOWN) {
             done = 1;
             bman.p_nr = -1;
             keypressed = 1;

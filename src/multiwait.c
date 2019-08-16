@@ -37,7 +37,7 @@ static void mw_init ()
 	gfx_blitdraw ();
 	bman.updatestatusbar = 1;
 	d_playerdetail ("mw_init:\n");
-	SDL_Flip (gfx.screen);
+	SDL_RenderPresent(gfx.renderer);
 	chat_show (10, gfx.res.y / 2, gfx.res.x - 20, gfx.res.y / 2 - 10);
 	chat_setactive (1, 1);
 };
@@ -49,7 +49,7 @@ static void mw_shutdown () {
 	gfx_blitdraw ();
 	draw_logo ();
 
-	SDL_Flip (gfx.screen);
+	SDL_RenderPresent(gfx.renderer);
 };
 
 
@@ -91,10 +91,10 @@ static void mw_keys_loop () {
 
 	if (keyb_gamekeys.state[BCK_fullscreen]  && !keyb_gamekeys.old[BCK_fullscreen]) {
         /* Switch Fullscreen */
-		SDL_WM_ToggleFullScreen(gfx.screen);
-		gfx.fullscreen = !gfx.fullscreen;
-        bman.updatestatusbar = 1; // force an update
-		bman.updatestatusbar = 1;
+	/* 	SDL_WM_ToggleFullScreen(gfx.screen); */
+	/* 	gfx.fullscreen = !gfx.fullscreen; */
+        /* bman.updatestatusbar = 1; // force an update */
+	/* 	bman.updatestatusbar = 1; */
 	}
 
 	if (keyb_gamekeys.state[BCK_esc] && !keyb_gamekeys.old[BCK_esc]) {

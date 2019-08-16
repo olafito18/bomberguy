@@ -150,11 +150,11 @@ config_init (int argc, char **argv)
     snd_init ();
     gfx_blitdraw ();
 
-    SDL_Flip (gfx.screen);
+    SDL_RenderPresent(gfx.renderer);
 
     sprintf (text, "bomberguy %s", VERSION);
     sprintf (icon, "%s/pixmaps/bomberclone.png", bman.datapath);
-    SDL_WM_SetCaption (text, NULL);
+    /* SDL_WM_SetCaption (text, NULL); */
     icon_img = IMG_Load (icon);
     if (icon_img == NULL)
         d_printf ("could not load icon. (%s)\n", icon);
@@ -166,7 +166,7 @@ config_init (int argc, char **argv)
         SDL_FreeSurface (tmp);
     }
 #endif
-    SDL_WM_SetIcon (icon_img, NULL);
+    /* SDL_WM_SetIcon (icon_img, NULL); */
 
     ReadPrgArgs_Jump (argc, argv);
 };
@@ -657,7 +657,7 @@ config_video ()
         }
     };
     draw_logo ();
-    SDL_Flip (gfx.screen);
+    SDL_RenderPresent(gfx.renderer);
 };
 
 

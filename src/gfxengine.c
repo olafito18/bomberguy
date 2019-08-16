@@ -48,7 +48,8 @@ inline void gfx_blitupdaterectclear () {
 /* SDL Update of the rects */
 void gfx_blitupdaterectdraw () {
 	if (blitrects_nr > 0)
-		SDL_UpdateRects (gfx.screen, blitrects_nr, blitrects);
+	  SDL_RenderPresent(gfx.renderer);
+		/* SDL_UpdateRects (gfx.screen, blitrects_nr, blitrects); */
 	
 	blitrects_nr = 0;
 	gfx_blitupdaterectclear ();

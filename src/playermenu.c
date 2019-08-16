@@ -140,8 +140,8 @@ int playermenu_selgfx (int pl_nr) {
 				 * go to the next gfx or the preview one 
 				 */
                 if (event.key.keysym.sym == SDLK_TAB) {
-                    keys = SDL_GetKeyState (NULL);
-                    if (keys[SDLK_LSHIFT] || keys[SDLK_RSHIFT]) {
+                    keys = SDL_GetKeyboardState(NULL);
+                    if (keys[SDL_SCANCODE_LSHIFT] || keys[SDL_SCANCODE_RSHIFT]) {
                         if ((--selgfx) < 0)
 							selgfx = gfx.player_gfx_count-1;
 					}

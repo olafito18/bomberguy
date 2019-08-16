@@ -6,7 +6,7 @@
 #include "bomberclone.h"
 
 #if HAVE_SDL_MIXER
-#include <SDL_mixer.h>
+#include "SDL_mixer.h"
 #else
 #define Mix_Chunk void
 #define Mix_Music void

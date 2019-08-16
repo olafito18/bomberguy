@@ -223,7 +223,7 @@ scale_image (SDL_Surface *orginal, int newx, int newy)
     amask = 0xff000000;
 #endif /*  */
 
-    surface = SDL_CreateRGBSurface (SDL_HWSURFACE, newx, newy, 32, rmask, gmask, bmask, amask);
+    surface = SDL_CreateRGBSurface (SDL_SWSURFACE, newx, newy, 32, rmask, gmask, bmask, amask);
     if (surface == NULL) {
         fprintf (stderr, "CreateRGBSurface failed: %s\n", SDL_GetError ());
         return NULL;
@@ -389,7 +389,7 @@ makegray_image (SDL_Surface * org)
     if (SDL_MUSTLOCK (dest)) {
         SDL_UnlockSurface (dest);
     }
-    SDL_SetColorKey (dest, SDL_SRCCOLORKEY, transpixel);
+    SDL_SetColorKey (dest, SDL_TRUE, transpixel);
     return dest;
 };
 
@@ -401,7 +401,7 @@ gfx_quater_image (SDL_Surface * org1, SDL_Surface * org2, SDL_Surface * org3, SD
     int y,
       x;
 
-    dest = SDL_CreateRGBSurface (SDL_HWSURFACE, org1->w, org1->h, org1->format->BitsPerPixel,
+    dest = SDL_CreateRGBSurface (SDL_SWSURFACE, org1->w, org1->h, org1->format->BitsPerPixel,
                                  org1->format->Rmask, org1->format->Gmask,
                                  org1->format->Bmask, org1->format->Amask);
     if (dest == NULL) {
@@ -503,7 +503,7 @@ SDL_Surface *gfx_copyfrom (SDL_Surface *img, SDL_Rect *rect) {
 		src = *rect;
 	
     res =
-        SDL_CreateRGBSurface (SDL_HWSURFACE, src.w, src.h, img->format->BitsPerPixel,
+        SDL_CreateRGBSurface (SDL_SWSURFACE, src.w, src.h, img->format->BitsPerPixel,
                               img->format->Rmask, img->format->Gmask,
                               img->format->Bmask, img->format->Amask);
 	

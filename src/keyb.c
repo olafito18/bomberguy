@@ -16,26 +16,26 @@ SDL_Joystick *joy[2];
  * Translation table for the keycodes 
  */
 const struct _key_codes key_codetab [] = {
-	{ SDLK_RSHIFT, "RSHIFT" },
-	{ SDLK_LSHIFT, "LSHIFT" },
-	{ SDLK_RCTRL, "RCTRL" },
-	{ SDLK_LCTRL, "LCTRL" },
-	{ SDLK_UP, "CurUP" },
-	{ SDLK_DOWN, "CurDOWN" },
-	{ SDLK_LEFT, "CurLEFT" },
-	{ SDLK_RIGHT, "CurRIGHT" },
-	{ SDLK_F1, "F1" },
-	{ SDLK_F2, "F2" },
-	{ SDLK_F3, "F3" },
-	{ SDLK_F4, "F4" },
-	{ SDLK_F5, "F5" },
-	{ SDLK_F6, "F6" },
-	{ SDLK_F7, "F7" },
-	{ SDLK_F8, "F8" },
-	{ SDLK_F9, "F9" },
-	{ SDLK_F10, "F10" },
-	{ SDLK_F11, "F11" },
-	{ SDLK_F12, "F12" },
+	{ SDL_SCANCODE_RSHIFT, "RSHIFT" },
+	{ SDL_SCANCODE_LSHIFT, "LSHIFT" },
+	{ SDL_SCANCODE_RCTRL, "RCTRL" },
+	{ SDL_SCANCODE_LCTRL, "LCTRL" },
+	{ SDL_SCANCODE_UP, "CurUP" },
+	{ SDL_SCANCODE_DOWN, "CurDOWN" },
+	{ SDL_SCANCODE_LEFT, "CurLEFT" },
+	{ SDL_SCANCODE_RIGHT, "CurRIGHT" },
+	{ SDL_SCANCODE_F1, "F1" },
+	{ SDL_SCANCODE_F2, "F2" },
+	{ SDL_SCANCODE_F3, "F3" },
+	{ SDL_SCANCODE_F4, "F4" },
+	{ SDL_SCANCODE_F5, "F5" },
+	{ SDL_SCANCODE_F6, "F6" },
+	{ SDL_SCANCODE_F7, "F7" },
+	{ SDL_SCANCODE_F8, "F8" },
+	{ SDL_SCANCODE_F9, "F9" },
+	{ SDL_SCANCODE_F10, "F10" },
+	{ SDL_SCANCODE_F11, "F11" },
+	{ SDL_SCANCODE_F12, "F12" },
 	{ ' ', "SPACE" },
 	{ -1, "" }
 };
@@ -188,8 +188,8 @@ void keyb_config_joypad (int key) {
 	
 	menu_displaytext ("Joypad Config", "Please press the new key\nfor this function.");
 	
-	keys = SDL_GetKeyState (NULL);
-	if (keys[SDLK_RETURN] || keys[SDLK_ESCAPE])
+	keys = SDL_GetKeyboardState (NULL);
+	if (keys[SDL_SCANCODE_RETURN] || keys[SDL_SCANCODE_ESCAPE])
 		keypressed = 1;
 	
 	timestamp = SDL_GetTicks (); // needed for time sync.
@@ -257,8 +257,8 @@ void keyb_config_readkey (int key) {
 	
 	menu_displaytext ("Keyboard Config", "Please press the new key\nfor this function.");
 
-    keys = SDL_GetKeyState (NULL);
-    if (keys[SDLK_RETURN] || keys[SDLK_ESCAPE])
+    keys = SDL_GetKeyboardState(NULL);
+    if (keys[SDL_SCANCODE_RETURN] || keys[SDL_SCANCODE_ESCAPE])
         keypressed = 1;
 
     timestamp = SDL_GetTicks (); // needed for time sync.
@@ -415,7 +415,7 @@ void keyb_init () {
 void keyb_loop (SDL_Event *event) {
 	int j, i, offset = 0;
 
-	Uint8 *keys = SDL_GetKeyState (NULL);
+	Uint8 *keys = SDL_GetKeyboardState (NULL);
 
 	if (joy[0]) {
 		SDL_JoystickEventState ( SDL_QUERY ); // js
