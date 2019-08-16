@@ -21,10 +21,10 @@ dnl Checks for programs.
 
 
 dnl Checks for libraries.
-dnl Check for SDL
-   AM_PATH_SDL(1.1.0,
+dnl Check for SDL2
+   AM_PATH_SDL2(2.0.0,
         :,
-        AC_MSG_ERROR(SDL not found. Make sure sdl-config is in your PATH, or specify with --with-sdl-prefix)
+        AC_MSG_ERROR(SDL2 not found. Make sure sdl-config is in your PATH or specify with --with-sdl-prefix)
     )
     
     CFLAGS="$SDL_CFLAGS $CFLAGS"
@@ -84,9 +84,12 @@ else
 fi
 
 
+dnl SDL_ttf library check
+AC_CHECK_LIB(SDL2_ttf, TTF_OpenFont, ,AC_MSG_ERROR([Unable to find SDL_ttf library]))
+
 dnl SDL_image library *****************************
-AC_CHECK_LIB(SDL_image, IMG_LoadPNG_RW, , AC_MSG_ERROR([
-*** Unable to find SDL_image libary with PNG support
+AC_CHECK_LIB(SDL2_image, IMG_LoadPNG_RW, , AC_MSG_ERROR([
+*** Unable to find SDL_image library with PNG support
 (http://www.libsdl.org/projects/SDL_image/)
 ]))
 
@@ -105,7 +108,7 @@ else
   		CFLAGS="$CFLAGS $SDLMIXER_CFLAGS"
 	fi
 
-	AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio, have_sdl_mixer="yes", have_sdl_mixer="no" , )
+	AC_CHECK_LIB(SDL2_mixer, Mix_OpenAudio, have_sdl_mixer="yes", have_sdl_mixer="no" , )
 
 	if test "x$have_sdl_mixer" = "xyes"; then
  		AC_DEFINE(HAVE_SDL_MIXER, [1], [SDL_mixer])
