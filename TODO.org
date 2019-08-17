@@ -16,6 +16,7 @@
 ** TODO create/update new art for bomberguy
 ** TODO replace bomberclone strings
 * TODO other [0%]
+** TODO check and update Makefile.am for data directory
 ** TODO New Cross Compiling Toolchain is needed
    rm cross-config.cache; LIBS="-static -ltiff -ljpeg -lpng12 -lz -lsmpeg -lSDL -logg -lpthread -lstdc++ -lwinmm" cross-configure.sh
 
