@@ -6,6 +6,7 @@
 ** TODO force stop or move away from portals when using one to avoid travel loops
 ** TODO update visual style
 ** TODO make smart map generation (avoid weird background/tiles colors)
+** TODO limit max speed of player when taking shoes icons
 * TODO bugs [0%]
 ** TODO fix segmentation fault when selecting fullscreen with certain resolutions
 ** TODO explosions
