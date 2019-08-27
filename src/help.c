@@ -104,7 +104,7 @@ void help (int showpage) {
 			
 			menu_create_image (menu, "dropliquid", 5, y, 1, gfx.menu_field[FT_sp_liquid], NULL);
 			menu_create_text (menu, "help", 55, y, 48, 10, COLOR_brown,
-			"The bomb you push now won't stop moving untill they explode.");
+			"The bomb you push now won't stop moving until they explode.");
 			y += 40;
 			
 			menu_create_image (menu, "dropliquid", 5, y, 1, gfx.menu_field[FT_sp_moved], NULL);
