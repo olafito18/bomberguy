@@ -95,7 +95,6 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
@@ -494,8 +493,10 @@ check: check-recursive
 all-am: Makefile
 installdirs: installdirs-recursive
 installdirs-am:
+install: install-recursive
 install-exec: install-exec-recursive
 install-data: install-data-recursive
+uninstall: uninstall-recursive
 
 install-am: all-am
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
@@ -604,34 +605,6 @@ uninstall-am:
 
 .PRECIOUS: Makefile
 
-
-install: install-recursive
-	@if test ! -d player; then \
-		echo ""; \
-		echo ""; \
-		echo "****************************************"; \
-		echo "*  Please download the Data Package,   *"; \
-		echo "* so you can complete the installation *"; \
-		echo "*   URL: http://www.bomberclone.de     *"; \
-		echo "****************************************"; \
-		echo ""; \
-		echo ""; \
-		exit 1; \
-	fi;
-	@if test ! -d ${DESTDIR}; then \
-		mkdir -p ${DESTDIR}; \
-	fi;
-	@if test ! -d ${DESTDIR}@PACKAGE_DATA_DIR@; then \
-		mkdir -p ${DESTDIR}@PACKAGE_DATA_DIR@; \
-	fi;
-#	cp -rf player ${DESTDIR}@PACKAGE_DATA_DIR@
-#	cp -rf maps ${DESTDIR}@PACKAGE_DATA_DIR@
-#	cp -rf gfx ${DESTDIR}@PACKAGE_DATA_DIR@
-#	cp -rf tileset ${DESTDIR}@PACKAGE_DATA_DIR@
-#	cp -rf music ${DESTDIR}@PACKAGE_DATA_DIR@
-
-uninstall: uninstall-recursive
-	rm -rf ${DESTDIR}@PACKAGE_DATA_DIR@
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

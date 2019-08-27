@@ -283,6 +283,24 @@ AC_DEFINE_UNQUOTED([PACKAGE_SOURCE_DIR], ["${packagesrcdir}"])
 AC_CONFIG_FILES([
  Makefile
  src/Makefile
+ data/Makefile
+ data/pixmaps/Makefile
+ data/music/Makefile
+ data/gfx/Makefile
+ data/player/Makefile
+ data/maps/Makefile
+ data/tileset/Makefile
+ data/tileset/cemetery/Makefile
+ data/tileset/classic/Makefile
+ data/tileset/cucumber/Makefile
+ data/tileset/default/Makefile
+ data/tileset/farm/Makefile
+ data/tileset/hell/Makefile
+ data/tileset/jungle/Makefile
+ data/tileset/modern/Makefile
+ data/tileset/radioactive/Makefile
+ data/tileset/supermario/Makefile
+ data/tileset/tricked/Makefile
 ])
 
 AC_OUTPUT

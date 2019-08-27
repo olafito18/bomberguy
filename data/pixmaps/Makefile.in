@@ -96,7 +96,6 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
@@ -145,8 +144,8 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(bomberclone_pixmapsdir)"
-DATA = $(bomberclone_pixmaps_DATA)
+am__installdirs = "$(DESTDIR)$(bomberguy_pixmapsdir)"
+DATA = $(bomberguy_pixmaps_DATA)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -267,12 +266,12 @@ target_vendor = @target_vendor@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-bomberclone_pixmapsdir = $(prefix)/@NO_PREFIX_PACKAGE_PIXMAPS_DIR@
-bomberclone_pixmaps_DATA = \
+bomberguy_pixmapsdir = $(prefix)/@NO_PREFIX_PACKAGE_PIXMAPS_DIR@
+bomberguy_pixmaps_DATA = \
 	bomberclone.png \
 	bomberclone.ico
 
-EXTRA_DIST = $(bomberclone_pixmaps_DATA)
+EXTRA_DIST = $(bomberguy_pixmaps_DATA)
 all: all-am
 
 .SUFFIXES:
@@ -305,27 +304,27 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
-install-bomberclone_pixmapsDATA: $(bomberclone_pixmaps_DATA)
+install-bomberguy_pixmapsDATA: $(bomberguy_pixmaps_DATA)
 	@$(NORMAL_INSTALL)
-	@list='$(bomberclone_pixmaps_DATA)'; test -n "$(bomberclone_pixmapsdir)" || list=; \
+	@list='$(bomberguy_pixmaps_DATA)'; test -n "$(bomberguy_pixmapsdir)" || list=; \
 	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(bomberclone_pixmapsdir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(bomberclone_pixmapsdir)" || exit 1; \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(bomberguy_pixmapsdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(bomberguy_pixmapsdir)" || exit 1; \
 	fi; \
 	for p in $$list; do \
 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 	  echo "$$d$$p"; \
 	done | $(am__base_list) | \
 	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(bomberclone_pixmapsdir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(bomberclone_pixmapsdir)" || exit $$?; \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(bomberguy_pixmapsdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(bomberguy_pixmapsdir)" || exit $$?; \
 	done
 
-uninstall-bomberclone_pixmapsDATA:
+uninstall-bomberguy_pixmapsDATA:
 	@$(NORMAL_UNINSTALL)
-	@list='$(bomberclone_pixmaps_DATA)'; test -n "$(bomberclone_pixmapsdir)" || list=; \
+	@list='$(bomberguy_pixmaps_DATA)'; test -n "$(bomberguy_pixmapsdir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(bomberclone_pixmapsdir)'; $(am__uninstall_files_from_dir)
+	dir='$(DESTDIR)$(bomberguy_pixmapsdir)'; $(am__uninstall_files_from_dir)
 tags TAGS:
 
 ctags CTAGS:
@@ -370,7 +369,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(DATA)
 installdirs:
-	for dir in "$(DESTDIR)$(bomberclone_pixmapsdir)"; do \
+	for dir in "$(DESTDIR)$(bomberguy_pixmapsdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -423,7 +422,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-bomberclone_pixmapsDATA
+install-data-am: install-bomberguy_pixmapsDATA
 
 install-dvi: install-dvi-am
 
@@ -467,21 +466,21 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-bomberclone_pixmapsDATA
+uninstall-am: uninstall-bomberguy_pixmapsDATA
 
 .MAKE: install-am install-strip
 
 .PHONY: all all-am check check-am clean clean-generic cscopelist-am \
 	ctags-am distclean distclean-generic distdir dvi dvi-am html \
 	html-am info info-am install install-am \
-	install-bomberclone_pixmapsDATA install-data install-data-am \
+	install-bomberguy_pixmapsDATA install-data install-data-am \
 	install-dvi install-dvi-am install-exec install-exec-am \
 	install-html install-html-am install-info install-info-am \
 	install-man install-pdf install-pdf-am install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installdirs maintainer-clean maintainer-clean-generic \
 	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am tags-am \
-	uninstall uninstall-am uninstall-bomberclone_pixmapsDATA
+	uninstall uninstall-am uninstall-bomberguy_pixmapsDATA
 
 .PRECIOUS: Makefile
 

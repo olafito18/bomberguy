@@ -8055,7 +8055,7 @@ cat >>confdefs.h <<_ACEOF
 _ACEOF
 
 
-ac_config_files="$ac_config_files Makefile src/Makefile"
+ac_config_files="$ac_config_files Makefile src/Makefile data/Makefile data/pixmaps/Makefile data/music/Makefile data/gfx/Makefile data/player/Makefile data/maps/Makefile data/tileset/Makefile data/tileset/cemetery/Makefile data/tileset/classic/Makefile data/tileset/cucumber/Makefile data/tileset/default/Makefile data/tileset/farm/Makefile data/tileset/hell/Makefile data/tileset/jungle/Makefile data/tileset/modern/Makefile data/tileset/radioactive/Makefile data/tileset/supermario/Makefile data/tileset/tricked/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -8813,6 +8813,24 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+    "data/Makefile") CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
+    "data/pixmaps/Makefile") CONFIG_FILES="$CONFIG_FILES data/pixmaps/Makefile" ;;
+    "data/music/Makefile") CONFIG_FILES="$CONFIG_FILES data/music/Makefile" ;;
+    "data/gfx/Makefile") CONFIG_FILES="$CONFIG_FILES data/gfx/Makefile" ;;
+    "data/player/Makefile") CONFIG_FILES="$CONFIG_FILES data/player/Makefile" ;;
+    "data/maps/Makefile") CONFIG_FILES="$CONFIG_FILES data/maps/Makefile" ;;
+    "data/tileset/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/Makefile" ;;
+    "data/tileset/cemetery/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/cemetery/Makefile" ;;
+    "data/tileset/classic/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/classic/Makefile" ;;
+    "data/tileset/cucumber/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/cucumber/Makefile" ;;
+    "data/tileset/default/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/default/Makefile" ;;
+    "data/tileset/farm/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/farm/Makefile" ;;
+    "data/tileset/hell/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/hell/Makefile" ;;
+    "data/tileset/jungle/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/jungle/Makefile" ;;
+    "data/tileset/modern/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/modern/Makefile" ;;
+    "data/tileset/radioactive/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/radioactive/Makefile" ;;
+    "data/tileset/supermario/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/supermario/Makefile" ;;
+    "data/tileset/tricked/Makefile") CONFIG_FILES="$CONFIG_FILES data/tileset/tricked/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
