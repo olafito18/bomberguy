@@ -623,7 +623,7 @@ config_video ()
         menu = menu_new ("Video Setup", 325, 300);
         menu_create_label (menu, "Resolution", 25, 70, 0, COLOR_brown);
         menu_create_list (menu, "res", 155, 55, 150, 85, screenres, &selres, 1);
-        menu_create_label (menu, "Colors", 65, 170, 0, COLOR_brown);
+        menu_create_label (menu, "Color depth", 65, 170, 0, COLOR_brown);
         menu_create_list (menu, "bpp", 195, 155, 50, 55, screenbpp, &selbpp, 2);
         menu_create_bool (menu, "Fullscreen", -1, 220, 150, &gfx.fullscreen, 3);
         menu_create_button (menu, "OK", -1, 260, 100, 0);
