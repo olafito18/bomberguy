@@ -8,4 +8,5 @@ src/bomberguy
 autom4te.cache/
 config.h
 src/.deps/
+stamp-h1
 
