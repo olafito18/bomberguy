@@ -8032,22 +8032,22 @@ fi
 
 
 
-$as_echo "#define PACKAGE_DATA_DIR data/" >>confdefs.h
+$as_echo "#define PACKAGE_DATA_DIR \"data/\"" >>confdefs.h
 
 
-$as_echo "#define PACKAGE_DOC_DIR doc/" >>confdefs.h
+$as_echo "#define PACKAGE_DOC_DIR \"doc/\"" >>confdefs.h
 
 
-$as_echo "#define PACKAGE_PIXMAPS_DIR data/pixmaps" >>confdefs.h
+$as_echo "#define PACKAGE_PIXMAPS_DIR \"data/pixmaps\"" >>confdefs.h
 
 
-$as_echo "#define PACKAGE_HELP_DIR help/" >>confdefs.h
+$as_echo "#define PACKAGE_HELP_DIR \"help/\"" >>confdefs.h
 
 
-$as_echo "#define PACKAGE_MENU_DIR . " >>confdefs.h
+$as_echo "#define PACKAGE_MENU_DIR \".\" " >>confdefs.h
 
 
-$as_echo "#define PACKAGE_SOURCE_DIR src/ " >>confdefs.h
+$as_echo "#define PACKAGE_SOURCE_DIR \"src/\" " >>confdefs.h
 
 
 ac_config_headers="$ac_config_headers config.h"
